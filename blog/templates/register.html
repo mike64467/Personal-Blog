@@ -1,0 +1,17 @@
+<!-- 这个页面用于给用户注册 -->
+{% extends "layout.html" %}
+{% block content %}
+<form method="POST" action="" class="login-container">
+    <h1 class="mb-5 text-center pull-right"><strong>Sign up</strong></h1>
+    {{ form.csrf_token }}
+    <p>{{ form.username.label }} {{ form.username (class="form-control",placeholder="username")}}</p>
+    <p>{{ form.password.label }} {{ form.password (class="form-control",placeholder="password")}}</p>
+    <p>{{ form.confirm_password.label }} {{ form.confirm_password (class="form-control",placeholder="confirm password") }}</p>
+    <input type="submit" value="Sign up" class="btn btn-warning">
+</form>
+
+{% for error in form.password.errors %}
+    <span style="color: red;">[{{ error }}]</span>
+{% endfor %}
+
+{% endblock content %}

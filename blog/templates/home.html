@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block head %}
+<link rel="stylesheet" href="../static/style.css"/>
+{% endblock %}
+
+
+{% block content %}
+  <div class="card backdrop-filter">
+    <div class="card-body">
+      <h1>
+        Join in us and share your life!
+      </h1>
+    </div>
+  </div>  
+  <div class="createbutton">
+    <a href="/create-post" class="btn btn-success btn-lg">Create your post!</a>
+  </div>
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+  {% for post in posts %}
+    <div class="col">
+      <div class="card backdrop-filter">
+          <a href="{{ url_for('post', post_id=post.id) }}"><img src="{{ url_for('static', filename='img/' + post.image_file) }}" class="card-img-top"></a>
+          <div class="card-body">
+          <h5 calss="card-title"><strong>{{ post.title }}</strong> &nbsp</h5>
+          <p class="card-text"><small class="text-muted">by {{ post.user.username }}</small></p>
+          <p class="card-text text_slice"><small> {{ post.content }} </small></p>
+          </div>
+      </div>
+    </div>
+  {% endfor %}
+  </div>
+
+  {% endblock content %}
+
+  {% block footer %}
+  <footer>
+    <p class="text-on-footer">If you like my website, my curriculum vitae is <a href="{{ url_for('about') }}">here</a></p>
+  </footer>
+  {% endblock %}

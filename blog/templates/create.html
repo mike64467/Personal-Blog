@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+<form method="POST" class="login-container" enctype="multipart/form-data">
+    <h1 class="mb-5 text-center"><strong>Share your live!</strong></h1>
+    {{ form.csrf_token }}
+    <p>{{ form.title.label  }}{{ form.title (class="form-control",placeholder="title") }}</p>
+    <p>{{ form.content.label }}{{ form.content (class="form-control", rows="3",placeholder="Share your story") }}</p>
+    <p>{{ form.file.label }}{{ form.file (class="form-control",placeholder="upload your picture") }}</p>
+    <button type="submit">Submit</button>
+
+</form>
+{% endblock content %}

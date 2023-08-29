@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="card backdrop-filter">
+    <img src="{{ url_for('static', filename='img/' + post.image_file) }}">
+    <div class="card-body">
+    <h5 calss="card-title">{{ post.title }} &nbsp</h5>
+    <p class="card-text"><small>by {{ post.user.username }}</small></p>
+    <p class="card-text">{{ post.content }}</p>
+    <p class="card-text text-muted"><small>upload in {{ post.date }}</small></p>
+    {# <img href="{{url_for('static/img', filename=post.file_name)}}"> #}
+    </div>
+</div>
+
+<div class="card backdrop-filter">
+    <div class="card-body">
+        <form method="POST" action="{{url_for('comment', post_id=post.id) }}">
+            {{ form.csrf_token }}
+            <p>{{ form.content (class="form-control",placeholder="Share your thoughts") }}</p>      
+            <p><input type="submit" value="submit" class="btn btn-primary"></p>
+        </form>
+    </div>
+</div>
+
+
+    {% for comment in comments %}
+    <div class="card backdrop-filter">
+        <div class="card-body">
+        <p class="card-text text-muted">
+        {{ comment.user.username }}
+        </p>
+
+        <p class="card-text"><strong>{{ comment.content }}</strong>
+        </p>
+        
+        <p class="card-text"><small class="text-muted">{{ comment.date }}</small>
+        </p>
+        </div>
+    </div>
+    {% endfor %}
+
+
+{% endblock content %}

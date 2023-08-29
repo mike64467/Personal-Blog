@@ -1,0 +1,141 @@
+
+/* ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(37, 37, 37, 0.7);
+    width: 100%;  
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 99;
+    }
+  
+  li {
+    float: right;
+    }
+    
+  li a {
+    display: block;
+    color: rgb(225, 225, 225);
+    text-align: center;
+    padding: 25px 20px;
+    text-decoration: none;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.5s;
+    }
+  
+    li a:hover {
+          color: rgb(225, 225, 225);			
+          text-align: center;
+      font-size: 23px;		
+          text-shadow: 0 0 10px white,0 0 20px white,0 0 30px white,0 0 40px white;	
+      transition: 0.3s;
+    }
+
+.navbar {
+  position: fixed;
+    top:0;
+}
+
+*/
+
+/* .my-background {
+  background-image: url('/img/audi.jpg');
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat, repeat;
+  background-attachment: fixed; 
+} */
+
+/* #navbar {
+  background: black;
+  margin-top: 100;
+} */
+
+.login-container{
+    width: 40%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 13%;
+    text-align: center;
+    background-color: rgba(255, 254, 254, 0.65);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    padding: 20px 50px;
+    border-radius: 23px;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
+}
+
+.navbackdrop-filter{
+  background-color: rgba(255, 254, 254, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.backdrop-filter{
+  background-color: rgba(255, 254, 254, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.first {    
+  padding-top: 140px;
+  margin-top: -60px; 
+  padding-bottom: 60px;
+}
+
+.flashes{
+  padding-top:140px;
+  margin-top: -60px;
+  text-align: center;
+} 
+
+body{
+  background-color: rgba(21, 21, 21, 0.9);
+  background-image: url(homebg1.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size:100%;  
+  background-color: rgba(21, 21, 21, 0.9);
+}
+
+img{
+  width: 100%;
+  margin-right: 10px;
+}
+
+.navbar-nav > li{
+  padding-right:10px;
+}
+
+
+.text_slice {
+width: 100%;
+display: block;
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+}
+
+.createbutton{
+  margin:2% 2% 3% 0px;
+}
+
+.text-on-footer{
+  background-color: rgb(66, 66, 66);
+  width: 100%;
+  color: #dcdcdc;
+  text-align: center;
+  line-height: 2;
+  margin: 0;
+  padding: 0px;
+  font-size: 15px;
+}

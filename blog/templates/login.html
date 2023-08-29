@@ -1,0 +1,14 @@
+<!-- 这个页面用于用户登录 -->
+{% extends "layout.html" %}
+<link rel="stylesheet" href="../static/style.css"/>
+{% block content %}
+<form class="login-container" method="POST" action="">
+  <h1 class="mb-5 text-center"><strong>Log in</strong></h1>
+  {{ form.csrf_token }}
+  <p>{{ form.username (class="form-control",placeholder="username") }}</p>
+  <p>{{ form.password (class="form-control",placeholder="password") }}</p>
+  <p><input type="submit" value="Log in" class="btn btn-success"></p>
+  <p>If you are new, please <a class="btn btn-warning btn-sm"  href="{{ url_for('register') }}">Sign up</a> to join in us</p>
+  
+</form>
+{% endblock content %}
