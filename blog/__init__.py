@@ -9,7 +9,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '<03391a09e27cd8f3704d0234fd1099c7c285a5cef0eb17b2>'
-app.config['SQLALCHEMY_DATABASE_URI'] =  'mysql+pymysql://c21095796:8970490zzyZZY@csmysql.cs.cf.ac.uk:3306/c21095796_ZiyeZhang_database1'
+app.config['SQLALCHEMY_DATABASE_URI'] =  'mysql+pymysql://ASDFGHHJKL:QWERTYUI@csmysql.cs.cf.ac.uk:3306/c21095796_ZiyeZhang_database1'
 db = SQLAlchemy(app)
 
 login_manager = LoginManager()
